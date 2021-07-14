@@ -14,41 +14,32 @@ Ainda em estudo, algumas informações serão apresentadas apenas para o médico
 
 ### Objetivo 1:
 
-#### Tabela com as Informações do Beneficiário - 
+#### Informações do Beneficiário - 
 - CPF (obrigatório)
 - Nome (obrigatório)
 - Data de nascimento (obrigatório)
 - Endereço (obrigatório)
 
-#### Tabela com as Informações dos Prestadores de Serviço (Médicos/Hospitais/Clinicas/Convênios) - 
+#### Informações dos Prestadores de Serviço (Médicos/Hospitais/Clinicas/Convênios) - 
 - Prestador	
--   PrestadorId
-		- RazaoSocial varchar(500)
-		- CNPJ		numeric(15,0)
+  - PrestadorId
+  - RazaoSocial varchar(500)
+  - CNPJ numeric(15,0)
   
-- Serviço 
+- Serviços
   - Descrição
   - Valor
 	
-	- Prestador	
-			PrestadorId
-			RazaoSocial varchar(500)
-			CNPJ		numeric(15,0)
-						
-	- Serviço
-			ServicoId
-			Descricao varchar(500)
+- PrestadorServicoValor
+  - ServicoId int
+  - PrestadorId int
+  - Valor money
 					
-	- PrestadorServicoValor
-			ServicoId int
-			PrestadorId int
-			Valor money
-					
-	- PrestadorEnderecoAtendimento
-			PrestadorEnderecoAtendimentoId primary Key identity(1,1)
-			PrestadorId
-			CEP
-			Complemento
-			Bairro
-			Cidade
-			UF
+- PrestadorEnderecoAtendimento
+  - PrestadorEnderecoAtendimentoId primary Key identity(1,1)
+  - PrestadorId
+  - CEP
+  - Complemento
+  - Bairro
+  - Cidade
+  - UF
