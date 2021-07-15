@@ -11,35 +11,9 @@ Ainda em estudo, algumas informações serão apresentadas apenas para o médico
 </p>
 
 
+### Objetivo 1: Tabelas com informações dos Beneficiarios e Prestadores 
 
-### Objetivo 1:
+<p align="center">
+  <img align="center" height="450" src="https://user-images.githubusercontent.com/67704261/125719356-fab43eed-a09c-452c-a0aa-6a0677e9d3c6.png" />
+</p>
 
-#### Informações do Beneficiário - 
-- CPF (obrigatório)
-- Nome (obrigatório)
-- Data de nascimento (obrigatório)
-- Endereço (obrigatório)
-
-#### Informações dos Prestadores de Serviço (Médicos/Hospitais/Clinicas/Convênios) - 
-- Prestador	
-  - PrestadorId
-  - RazaoSocial varchar(500)
-  - CNPJ numeric(15,0)
-  
-- Serviços
-  - Descrição
-  - Valor
-	
-- PrestadorServicoValor
-  - ServicoId int
-  - PrestadorId int
-  - Valor money
-					
-- PrestadorEnderecoAtendimento
-  - PrestadorEnderecoAtendimentoId primary Key identity(1,1)
-  - PrestadorId
-  - CEP
-  - Complemento
-  - Bairro
-  - Cidade
-  - UF
